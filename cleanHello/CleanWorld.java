@@ -15,6 +15,13 @@ public class CleanWorld {
 
         arrayLoop();
 
+        forEachLoop();
+
+        System.out.println("Lets go !");
+        
+        while (randomNumber() != 100) {
+            System.out.println(randomNumber());
+        } System.out.println("100 atteint");
     }
 
     /** affiche le message "hello" au destinataire fourni
@@ -30,6 +37,17 @@ public class CleanWorld {
         for (int i=0; i<myArray.length; i++) {
             System.out.println(myArray[i]);
         }
+    }
+
+    private static void forEachLoop() {
+        int[] myArray = new int[]{1, 6, 9};
+        for (int number: myArray){
+            System.out.println(number);
+        }
+    }
+
+    static int randomNumber() {
+        return (int) ((Math.random() * ((100 - 1) +1))+ 1);
     }
 
 }
